@@ -4,7 +4,7 @@ import { idlFactory as backend_idl, canisterId as backend_id } from "declaration
 const agent = new HttpAgent();
 const backend = Actor.createActor(backend_idl, { agent, canisterId: backend_id });
 
-async function addTaxPayer() {
+window.addTaxPayer = async function() {
     const tid = document.getElementById("tid").value;
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
@@ -15,7 +15,7 @@ async function addTaxPayer() {
     loadAllTaxPayers();
 }
 
-async function searchTaxPayer() {
+window.searchTaxPayer = async function() {
     const tid = document.getElementById("searchTid").value;
     const result = await backend.searchTaxPayer(tid);
     const searchResultDiv = document.getElementById("searchResult");
