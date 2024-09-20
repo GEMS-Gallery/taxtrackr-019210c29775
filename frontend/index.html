@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>TaxPayer Management</h1>
-    <div>
-        <h2>Add New TaxPayer</h2>
-        <input type="text" id="tid" placeholder="TID">
-        <input type="text" id="firstName" placeholder="First Name">
-        <input type="text" id="lastName" placeholder="Last Name">
-        <input type="text" id="address" placeholder="Address">
-        <button onclick="addTaxPayer()">Add</button>
-    </div>
-    <div>
-        <h2>Search TaxPayer</h2>
-        <input type="text" id="searchTid" placeholder="TID">
-        <button onclick="searchTaxPayer()">Search</button>
-        <div id="searchResult"></div>
-    </div>
-    <div>
-        <h2>All TaxPayers</h2>
-        <ul id="taxpayerList"></ul>
+    <div class="container">
+        <h1>TaxPayer Management</h1>
+        <div class="form-section">
+            <h2>Add New TaxPayer</h2>
+            <input type="text" id="tid" placeholder="TID">
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="address" placeholder="Address">
+            <button onclick="addTaxPayer()">Add</button>
+        </div>
+        <div class="form-section">
+            <h2>Search TaxPayer</h2>
+            <input type="text" id="searchTid" placeholder="TID">
+            <button onclick="searchTaxPayer()">Search</button>
+            <div id="searchResult" class="result"></div>
+        </div>
+        <div class="list-section">
+            <h2>All TaxPayers</h2>
+            <ul id="taxpayerList"></ul>
+        </div>
     </div>
     <script type="module" src="index.js"></script>
 </body>
